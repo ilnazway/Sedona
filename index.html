@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Седона - небольшой городок в Аризоне</title>
@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-		<nav>
+		<nav aria-label="Навигация сайта">
 			<ul>
 				<li>
 					<a href="blank.html">Информация</a>
@@ -105,8 +105,26 @@
 			</p>
 
 			<h2>Поиск гостиниц в Седоне</h2>
-			<!-- Форма поиска -->
-			<button type="button">НАЙТИ</button>
+			
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<p>
+					<label for="arrival-date">Дата заезда:</label>
+					<input type="text" placeholder="7 февраля 2021" id="arrival-date" name="Дата заезда">
+				</p>
+				<p>
+					<label>Дата выезда:
+					<input type="date" placeholder="11 февраля 2021" name="Дата выезда"></label>
+				</p>
+				<p>
+					<label for="adults">Взрослые:</label>
+					<input type="number" id="adults" name="Взрослые">
+				</p>
+				<p>
+					<label for="children">Дети:</label>
+					<input type="number" id="children" name="Дети">
+				</p>
+			<button type="submit">Найти</button>
+			</form>
 		</section>
 	</main>
 
@@ -120,19 +138,21 @@
 		<section>
 			<ul>
 				<li>
-					<a href="#">Twitter</a>
+					<a href="#" aria-label="Twitter"></a>
 				</li>
 				<li>
-					<a href="#">Facebook</a>
+					<a href="#" aria-label="Facebook"></a>
 				</li>
 				<li>
-					<a href="#">YouTube </a>
+					<a href="#" aria-label="YouTube"></a>
 				</li>
 			</ul>
 		</section>
 		<section>
-			<p>Website by</p>
-			<img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика">
+			<a href="/" aria-label="Ссылка на разработчика">
+				<p>Website by</p>
+				<img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика">
+			</a>
 		</section>
 	</footer>
 

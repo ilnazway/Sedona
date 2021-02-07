@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Гостиницы</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -30,21 +31,54 @@
 	</header>
 
 	<main>
-		<h1>Фильтр поиска гостиницы</h1>
 		<section>
-			<h2>Инфраструктура</h2>
-			<!-- кнопочки с выбором -->
-		</section>
-
-		<section>
-			<h2>Тип жилья</h2>
-			<!-- кнопочки с выбором -->
-		</section>
-
-		<section>
-			<h2>Стоимотсь в сутки</h2>
-			<!-- ползунок с выбором -->
-			<button type="button">Показать</button>
+			<h1 class="visually-hidden">Фильтр поиска гостиницы</h1>
+				<form action="https://echo.htmlacademy.ru" method="post">
+					<fieldset>
+						<legend>Инфраструктура:</legend>
+						<ul>
+							<li>
+								<input type="checkbox" id="pool" value="pool" name="infrastructure-group">
+								<label for="pool">Бассейн</label>
+							</li>
+							<li>
+								<input type="checkbox" id="parking" value="parking" name="infrastructure-group">
+								<label for="parking">Парковка</label>
+							</li>
+							<li>
+								<input type="checkbox" id="wi-fi" value="wi-fi" name="infrastructure-group">
+								<label for="wi-fi">Wi-fi</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Тип жилья:</legend>
+						<ul>
+							<li>
+								<label>
+									<input type="checkbox" value="hotel" name="housing-type-group">
+									Гостиница
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" value="motel" name="housing-type-group">
+									Мотель
+								</label>
+							</li>
+							<li>
+								<input type="checkbox" value="apartments" name="housing-type-group">
+								Апартаменты
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Стоимость в сутки (Р):</legend>
+						<label for="value slider">Ползунок стоимости</label>
+						<input type="range" min="0" max="3000" step="500" id="value slider" name="value slider" autocomplete="3000">
+					</fieldset>
+					<button type="submit">Показать</button>
+				</form>
 		</section>
 
 		<section>
@@ -116,19 +150,21 @@
 		<section>
 			<ul>
 				<li>
-					<a href="#">Twitter</a>
+					<a href="#" aria-label="Twitter"></a>
 				</li>
 				<li>
-					<a href="#">Facebook</a>
+					<a href="#" aria-label="Facebook"></a>
 				</li>
 				<li>
-					<a href="#">YouTube </a>
+					<a href="#" aria-label="YouTube"></a>
 				</li>
 			</ul>
 		</section>
 		<section>
-			<p>Website by</p>
-			<img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика">
+			<a href="/" aria-label="Ссылка на разработчика">
+				<p>Website by</p>
+				<img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика">
+			</a>
 		</section>
 	</footer>
 
