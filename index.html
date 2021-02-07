@@ -16,7 +16,7 @@
 					<a href="blank.html">Фото и видео</a>
 				</li>
 				<li>
-					<a href="blank.html">
+					<a href="blank.html" aria-label="Ссылка на главную">
 						<img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
 					</a>
 				</li>
@@ -109,19 +109,19 @@
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<p>
 					<label for="arrival-date">Дата заезда:</label>
-					<input type="text" placeholder="7 февраля 2021" id="arrival-date" name="Дата заезда">
+					<input type="text" placeholder="7 февраля 2021" id="arrival-date" name="Дата заезда" required>
 				</p>
 				<p>
 					<label>Дата выезда:
-					<input type="date" placeholder="11 февраля 2021" name="Дата выезда"></label>
+					<input type="date" placeholder="11 февраля 2021" name="Дата выезда" required></label>
 				</p>
 				<p>
 					<label for="adults">Взрослые:</label>
-					<input type="number" id="adults" name="Взрослые">
+					<input type="number" id="adults" name="Взрослые" required>
 				</p>
 				<p>
 					<label for="children">Дети:</label>
-					<input type="number" id="children" name="Дети">
+					<input type="number" id="children" name="Дети" required>
 				</p>
 			<button type="submit">Найти</button>
 			</form>
