@@ -1,3 +1,312 @@
-body {
-	background: #DCDCDC;
+:root {
+	--color-white: #ffffff;
+	--color-mistyrose: #EEEEEE;
+	--color-black: #000000;
+	--color-dimgray: #A9A9A9;
+	--color-darkgrey: #333333;
+	--color-grey: #F2F2F2;
+	--color-aimgrey: #EBEBEB;
+	--color-focusgrey: #E5E5E5;
+	--color-blue: #81B3D2;
+	--color-aimblue: #669EC0;
+	--color-pressblue: #5496BD;
+	--color-brown: #766357;
+	--color-aimbrown: #604E43;
+	--color-pressbrown: #503E33;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+body {
+	background-color: var(--color-grey);
+	font-family: "PT Sans", sans-serif;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 21px;
+	margin: 0;
+	padding: 0;
+	color: var(--color-darkgrey);
+	min-width: 1200px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main-nav {
+	background-color: var(--color-white);
+}
+
+.nav-list {
+	list-style: none;
+}
+
+.nav-list a {
+	font-weight: 700;
+	color: var(--color-black);
+	text-decoration: none;
+	line-height: 26px;
+}
+.nav-list a:hover, .nav-list a:focus {
+	color: var(--color-darkgrey);
+}
+
+.wrapper-fon {
+	background-image: url("../img/background photo.jpg");
+	background-repeat: no-repeat;
+	background-color: #81B3D2;
+}
+
+.main-caption {
+	line-height: 26px;
+}
+
+.main-caption h1 {
+	font-size: 21px;
+	font-weight: 700;
+	color: var(--color-black);
+}
+
+.city-holder {
+	background-color: var(--color-blue);
+	color: var(--color-white);
+}
+
+.advantages ul {
+	list-style: none;
+	text-align: center;
+}
+
+.advantages h3 {
+	color: var(--color-black);
+	font-size: 21px;
+}
+
+.devil-holder {
+	background-color: var(--color-blue);
+	color: var(--color-white);
+}
+
+.next-advantages {
+	background-color: var(--color-mistyrose);
+}
+
+.next-advantages h2 {
+	color: var(--color-black);
+}
+
+.next-advantages ul {
+	list-style: none;
+	text-align: center;
+}
+
+.search-holder {
+	background-color: var(--color-white);
+	line-height: 24px;
+}
+
+.button {
+	font: inherit;
+	text-transform: inherit;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
+	color: var(--color-white);
+	border: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.button-hotels {
+	background-color: var(--color-brown);
+	height: 86px;
+}
+
+.button-hotels:hover {
+	background-color: var(--color-aimbrown);
+}
+
+.button-hotels:active {
+	background-color: var(--color-pressbrown);
+	outline: 0;
+	color: rgba(255,255,255, 0.3);
+}
+
+.button-search {
+	background-color: var(--color-blue);
+}
+
+.button-search:hover {
+	background-color: var(--color-aimblue);
+}
+
+.button-search:active {
+	background-color: var(--color-pressblue);
+	outline: 0;
+	color: rgba(255,255,255, 0.3);
+}
+
+.search-hotel {
+	background-color: var(--color-white);
+	line-height: 26px;
+	max-width: 568px;
+}
+
+.search-hotel h2 {
+	color: var(--color-white);
+	background-color: var(--color-brown);
+}
+
+.search-hotel p {
+	color: var(--color-black);
+	font-weight: 700;
+}
+
+.search-hotel input {
+	font: inherit;
+	background-color: var(--color-grey);
+	border: 0;
+	text-transform: inherit;
+}
+
+.search-hotel input::placeholder {
+	color: var(--color-black);
+}
+
+.search-hotel input:hover {
+	background-color: var(--color-aimgrey);
+}
+
+.search-hotel input:focus {
+	background-color: var(--color-white);
+	outline: 2px solid var(--color-focusgrey);
+	outline-offset: -2px;
+}
+
+.main-footer {
+	background-color: var(--color-white);
+	opacity: 0.9;
+	line-height: 26px;
+}
+
+.contacts {
+	font-size: 21px;
+	font-weight: 700;
+	color: var(--color-black);
+}
+
+.social ul {
+	list-style: none;
+}
+
+.social a {
+	display: block;
+	z-index: 1;
+}
+
+.social-button {
+	z-index: -1;
+	pointer-events: none;
+}
+
+.twitter {
+	background-color: var(--color-blue);
+	padding: 16px 14px 15px 15px;
+}
+
+.facebook {
+	background-color: var(--color-blue);
+	padding: 13px 17px;
+}
+
+.youtube {
+	background-color: var(--color-blue);
+	padding: 16px 13px;
+}
+
+.developer a {
+	color: var(--color-black);
+	text-decoration: none;
+}
+
+
+/* Hotels */
+
+main {
+	color: var(--color-black);
+	background-color: var(--color-white);
+}
+
+.main-filter {
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	font-weight: 700;
+}
+
+.main-filter label {
+	font-weight: 400;
+}
+
+.filter-border {
+	border: none;
+}
+
+.filter-title {
+	font-size: 16px;
+}
+
+.button-show {
+	background-color: transparent;
+	font-weight: 400;
+	font-size: 14px;
+	border: 2px solid var(--color-white);
+	border-radius: 2px;
+}
+
+/* Hotel options */
+
+.found {
+	font-size: 12px;
+}
+
+.found h2 {
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.found-list {
+	list-style: none;
+}
+
+.hotels-list {
+	list-style: none;
+}
+
+.hotel-title {
+	font-size: 21px;
+	line-height: 26px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.button-card {
+	font-size: 14px;
+	line-height: 21px;
+	padding: 3px 17px 3px 16px;
+}
+
+.rating {
+	background-color: var(--color-grey);
+}
+
