@@ -4,39 +4,43 @@
 	<meta charset="UTF-8">
 	<title>Гостиницы</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/Normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<nav class="main-nav" aria-label="Навигация сайта">
-			<ul class="nav-list">
-				<li>
-					<a href="blank.html">Информация</a>
-				</li>
-				<li>
-					<a href="blank.html">Фото и видео</a>
-				</li>
-				<li>
-					<a href="blank.html" aria-label="Ссылка на главную">
-						<img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
-					</a>
-				</li>
-				<li>
-					<a href="blank.html">Карта штата</a>
-				</li>
-				<li>
-					<a href="hotels.html">Гостиницы</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
+<div class="main">
+	<div class="main-wrapper">
+		<header>
+			<nav class="main-nav" aria-label="Навигация сайта">
+				<ul class="nav-list">
+					<li>
+						<a href="blank.html">Информация</a>
+					</li>
+					<li>
+						<a href="blank.html">Фото и видео</a>
+					</li>
+					<li>
+						<a href="index.html" aria-label="Ссылка на главную">
+							<img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
+						</a>
+					</li>
+					<li>
+						<a href="index.html#map">Карта штата</a>
+					</li>
+					<li>
+						<a href="hotels.html">Гостиницы</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
 	<main>
 		<section class="main-filter">
 			<h1 class="visually-hidden">Фильтр поиска гостиницы</h1>
-				<form action="https://echo.htmlacademy.ru" method="post">
+				<form class="form-wrapper" action="https://echo.htmlacademy.ru" method="post">
 					<fieldset class="filter-border filter-infrastructure">
 						<legend class="filter-title">Инфраструктура:</legend>
-						<ul>
+						<ul class="filter-list">
 							<li>
 								<input type="checkbox" id="pool" name="pool">
 								<label for="pool">Бассейн</label>
@@ -52,8 +56,8 @@
 						</ul>
 					</fieldset>
 					<fieldset class="filter-border filter-housing">
-						<legend class="filter-title">Тип жилья:</legend>
-						<ul>
+						<legend class="filter-type">Тип жилья:</legend>
+						<ul class="filter-list">
 							<li>
 								<label>
 									<input type="checkbox" name="hotel">
@@ -77,15 +81,15 @@
 						<legend class="filter-title">Стоимость в сутки (Р):</legend>
 						<label for="value slider">Ползунок стоимости</label>
 						<input type="range" min="0" max="3000" step="500" id="value slider" name="value slider" autocomplete="3000">
-					</fieldset>
 					<button class="button button-show" type="submit">Показать</button>
+					</fieldset>
 				</form>
 		</section>
 
 		<section class="found">
-			<h2>Найдено: 3</h2>
-			<p>Сортировка:</p>
 			<ul class="found-list">
+				<li><h2 class="found-title">Найдено: 3</h2></li>
+				<li><p>Сортировка:</p></li>
 				<li>по цене</li>
 				<li>по типу</li>
 				<li>по рейтингу</li>
@@ -95,20 +99,23 @@
 
 		<article class="main-hotels">
 			<ul class="hotels-list">
-				<li>
-					<hr>
+				<hr>
+				<li class="hotel-item">
 					<a href="#">
 						<img src="files/Layer 21.png" width="135" height="90" alt="Amara Resort & Spa">
 					</a>
-					<a href="#" class="hotel-title">
-						<h3>Amara Resort & Spa</h3>
-					</a>
-					<p>Гостиница</p>
-					<p>От 4000 Р.</p>
-					<a href="blank.html" class="button button-search button-card">Подробнее</a>
-					<a href="blank.html" class="button button-hotels button-card">Забронировать</a>
-					<p>Звездочки 4</p>
-					<p class="rating">Рейтинг: 8,5</p>
+					<div class="hotel-info-wrapper">
+						<a href="#" class="hotel-link">
+							<h3 class="hotel-title">Amara Resort & Spa</h3>
+						</a>
+						<p class="hotel-type">Гостиница<span> От 4000 Р.</span></p>
+						<a href="blank.html" class="button button-search button-card">Подробнее</a>
+						<a href="blank.html" class="button button-hotels button-card">Забронировать</a>
+					</div>
+					<div class="rating-wrapper">
+						<p>Звездочки 4</p>
+						<p class="rating">Рейтинг: 8,5</p>
+					</div>
 				</li>
 				<li>
 					<hr>
@@ -145,40 +152,40 @@
 		</article>
 	</main>
 
-	<footer class="main-footer">
-		<section class="contacts">
-			<p>#visitSEDONA</p>
-			<p>ТЕЛ: +7(495) 666-01-66</p>
-		</section>
-		<section class="social">
-			<ul>
-				<li>
-					<a href="/" aria-label="Twitter">
-					<object class="social-button twitter" type="image/svg+xml" data="img/twitter.svg" width="17" height="17">
-					</object>
-					</a>
-				</li>
-				<li>
-					<a href="/" aria-label="Facebook">
-						<object class="social-button facebook" type="image/svg+xml" data="img/fb-icon.svg" width="12" height="22">
-					</object>
-					</a>
-				</li>
-				<li>
-					<a href="https://yandex.ru/" aria-label="YouTube">
-						<object class="social-button youtube" type="image/svg+xml" data="img/youtube.svg" width="20" height="16">
-					</object>
-					</a>
-				</li>
-			</ul>
-		</section>
-		<section class="developer">
-			<a href="/" aria-label="Ссылка на разработчика">
-				<p>Website by</p>
-				<img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика">
-			</a>
-		</section>
-	</footer>
+		<footer class="main-footer">
+			<section class="contacts">
+				<p>#visitSEDONA</p>
+				<p>ТЕЛ: +7(495) 666-01-66</p>
+			</section>
+			<section class="social">
+				<ul class="social-list">
+					<li>
+						<a href="/" aria-label="Twitter">
+							<object class="social-button twitter" type="image/svg+xml" data="img/twitter.svg" width="17" height="17">
+							</object>
+						</a>
+					</li>
+					<li>
+						<a href="/" aria-label="Facebook">
+							<object class="social-button facebook" type="image/svg+xml" data="img/fb-icon.svg" width="12" height="22">
+							</object>
+						</a>
+					</li>
+					<li>
+						<a href="https://yandex.ru/" aria-label="YouTube">
+							<object class="social-button youtube" type="image/svg+xml" data="img/youtube.svg" width="20" height="16">
+							</object>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section class="developer">
+				<a href="/" aria-label="Ссылка на разработчика">Website by</a>
+				<a href="/"><img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип разработчика"></a>
+			</section>
+		</footer>
+	</div>
+</div>
 
 </body>
 </html>
