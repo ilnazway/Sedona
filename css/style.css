@@ -509,11 +509,27 @@ img {
 	font-weight: 700;
 	color: var(--color-white);
 	padding: 28px 70px;
+	height: 217px;
+	box-sizing: border-box;
 }
 
 .form-wrapper {
 	display: flex;
 	justify-content: start;
+}
+
+.filter-fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.filter-fieldset legend {
+	font-size: 16px;
+}
+
+.filter-housing {
+	margin-left: 119px;
 }
 
 .filter-list {
@@ -522,21 +538,138 @@ img {
 	padding: 0;
 }
 
-.main-filter label {
+.filter-list li {
+	margin-top: 25px;
+	position: relative;
+}
+
+.filter-list label {
 	font-weight: 400;
 }
 
-.filter-border {
-	border: none;
+.filter-list .check {
+	padding-left: 43px;
 }
 
-.filter-type {
-	font-size: 16px;
+.check-input {
+	position: absolute;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }
+
+.check-box {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z' fill='white'/%3E%3C/svg%3E%0A");
+	background-size: 100%;
+	margin-left: -43px;
+	top: 50%;
+	margin-top: -13px;
+}
+
+.check-left {
+	margin-left: 0;
+}
+
+.check-input:checked + .check-box {
+	width: 27px;
+	height: 23px;
+	background-image: url("../img/checkbox-on.svg");
+}
+
+.check-input:disabled + .check-box {
+	background-image: url("../img/checkbox-offdis.svg");
+}
+
+.check-input:checked:disabled + .check-box {
+	background-image: url("../img/checkbox-ondis.svg");
+}
+
+/* Filter cost */
 
 .filter-cost {
 	margin-left: auto;
+	width: 317px;
 }
+
+.range-wrapper {
+	margin-top: 12px;
+	border: 2px solid var(--color-white);
+	border-radius: 2px;
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.range-wrapper .start-cost {
+	border-right: 2px solid var(--color-white);
+	box-sizing: border-box;
+}
+
+.range-wrapper input {
+	padding: 0;
+	border: 0;
+	display: block;
+    width: 50%;
+    float: left;
+    background-color: inherit;
+    text-align: center;
+	text-transform: uppercase;
+	color: var(--color-white);
+	line-height: inherit;
+	font-size: inherit;
+}
+
+.range-wrapper input::placeholder {
+	color: var(--color-white);
+}
+
+.range-wrapper input:focus {
+	outline: 0;
+}
+
+.toggle-wrapper {
+	padding-top: 20px;
+	padding-bottom: 33px;
+}
+
+.toggle-basic {
+	height: 2px;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 0 10px;
+}
+.toggle-active {
+	height: 2px;
+	width: 50%;
+	background: var(--color-white);
+	position: relative;
+}
+
+.toggle-active .switch {
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background-color: #ABABAB;
+	border: 8px solid var(--color-white);
+	box-shadow: 0 2px 0px 0px rgba(171, 171, 171, 0.3);
+	position: absolute;
+	cursor: pointer;
+}
+
+.toggle-active .min-switch {
+	left: -10px;
+	top: -10px;
+}
+
+.toggle-active .max-switch {
+	right: -10px;
+	top: -10px;
+}
+
 
 .button-show {
 	background-color: transparent;
@@ -544,6 +677,10 @@ img {
 	font-size: 14px;
 	border: 2px solid var(--color-white);
 	border-radius: 2px;
+	line-height: inherit;
+	padding: 5px 34px 6px;
+	display: block;
+	margin: 0 auto;
 }
 
 /* Hotel options */
