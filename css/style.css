@@ -70,7 +70,15 @@ img {
 	line-height: 26px;
 }
 .nav-list a:hover, .nav-list a:focus {
-	color: var(--color-darkgrey);
+	color: var(--color-blue);
+}
+
+.nav-list a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-list a.active-link {
+	color: var(--color-brown);
 }
 
 
@@ -719,7 +727,6 @@ img {
 	padding-right: 73px;
 	min-height: 86px;
 	vertical-align: middle;
-
 }
 
 .found-list li {
@@ -752,8 +759,15 @@ img {
 	border-bottom: 1px dotted var(--color-blue);
 }
 
-.sorting-button:hover {
+.sorting-button:hover, .sorting-button:focus {
 	cursor: pointer;
+	color: var(--color-blue);
+	outline: 0;
+}
+
+.sorting-button:active {
+	border-bottom: none;
+	color: var(--color-black);
 }
 
 .active-button {
@@ -770,6 +784,22 @@ li .triangle {
 	border-bottom: 0;
 }
 
+.triangle-svg path {
+	fill: #CACACA;
+}
+
+.triangle-svg.active path {
+	fill: var(--color-blue);
+}
+
+.triangle-svg path:hover {
+	fill: var(--color-black);
+}
+
+.triangle-svg path:active {
+	fill: var(--color-blue);
+}
+
 
 /* Hotels list */
 
@@ -782,17 +812,21 @@ li .triangle {
 
 .hotel-item {
 	display: flex;
-	padding-top: 30px;
+	padding-top: 25px;
 	padding-bottom: 30px;
 	padding-right: 73px;
 	padding-left: 73px;
 	flex-direction: row;
-	vertical-align: middle;
 	border-bottom: 1px solid var(--color-focusgrey);
 }
 
-.hotel-item img {
+.hotel-item .link-img {
+	align-self: flex-end;
+}
+
+.hotel-item .link-img img {
 	display: block;
+	align-self: flex-end;
 }
 
 .hotel-info {
@@ -803,18 +837,26 @@ li .triangle {
 	text-decoration: none;
 	color: inherit;
 	display: inline-block;
+	margin-bottom: 7px;
 }
 
 .hotel-title {
 	margin: 0;
-	margin-bottom: 7px;
 	font-size: 21px;
 	line-height: 26px;
 }
 
+.hotel-link:hover {
+	color: var(--color-blue);
+}
+
+.hotel-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
 .hotel-info .type-wrapper {
 	display: grid;
-	grid-template-columns: 110px 142px;
+	grid-template-columns: 110px 1fr;
 	column-gap: 6px;
 }
 
@@ -832,10 +874,12 @@ li .triangle {
 	line-height: 21px;
 	padding: 3px 17px 3px 16px;
 	height: auto;
+	min-width: auto;
 }
 
 .rating-wrapper {
 	margin-left: auto;
+	margin-top: 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

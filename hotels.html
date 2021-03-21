@@ -28,7 +28,7 @@
 						<a href="index.html#map">Карта штата</a>
 					</li>
 					<li>
-						<a href="hotels.html">Гостиницы</a>
+						<a href="hotels.html" class="active-link">Гостиницы</a>
 					</li>
 				</ul>
 			</nav>
@@ -124,14 +124,14 @@
 				</li>
 				<li class="sorting-triangle">
 					<button class="sorting-button triangle">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="triangle-svg" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
 						</svg>
 					</button>
 				</li>
 				<li>
-					<button class="sorting-button triangle">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<button class="sorting-button triangle active">
+						<svg class="triangle-svg active" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.5 10L0 0H11" fill="#81B3D2"/>
 						</svg>
 					</button>
@@ -142,7 +142,7 @@
 		<section class="main-hotels">
 			<ul class="hotels-list">
 				<li class="hotel-item">
-					<a href="#">
+					<a href="#" class="link-img">
 						<img src="files/Layer 21.png" width="135" height="90" alt="Amara Resort & Spa">
 					</a>
 					<div class="hotel-info">
@@ -168,16 +168,19 @@
 				</li>
 
 				<li class="hotel-item">
-					<a href="#">
+					<a href="#" class="link-img">
 						<img src="files/Layer 89 copy.png" width="135" height="90" alt="Desert Quail Inn">
 					</a>
-					<div class="hotel-info-wrapper">
+					<div class="hotel-info">
 						<a href="#" class="hotel-link">
 							<h3 class="hotel-title">Desert Quail Inn</h3>
 						</a>
-						<p class="hotel-type">Мотель<span> От 3000 Р.</span></p>
+						<div class="type-wrapper">
+							<p class="hotel-type">Мотель</p>
+							<p class="hotel-type">От 3000 Р.</p>
 							<a href="blank.html" class="button button-search button-card">Подробнее</a>
 							<a href="blank.html" class="button button-hotels button-card">Забронировать</a>
+						</div>
 					</div>
 					<div class="rating-wrapper">
 						<div class="stars">
@@ -190,16 +193,19 @@
 				</li>
 				
 				<li class="hotel-item">
-					<a href="#">
+					<a href="#" class="link-img">
 						<img src="files/Rectangle.png" width="135" height="90" alt="Villas at Poco Diablo">
 					</a>
-					<div class="hotel-info-wrapper">
+					<div class="hotel-info">
 						<a href="#" class="hotel-link">
 							<h3 class="hotel-title">Villas at Poco Diablo</h3>
 						</a>
-						<p class="hotel-type">Апартаменты<span> От 2000 Р.</span></p>
+						<div class="type-wrapper">
+							<p class="hotel-type">Апартаменты</p>
+							<p class="hotel-type">От 2000 Р.</p>
 							<a href="blank.html" class="button button-search button-card">Подробнее</a>
 							<a href="blank.html" class="button button-hotels button-card">Забронировать</a>
+						</div>
 					</div>
 					<div class="rating-wrapper">
 						<div class="stars">
